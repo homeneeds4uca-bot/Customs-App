@@ -3,7 +3,8 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-Proprietary-red.svg)
 ![Python](https://img.shields.io/badge/python-3.11+-green.svg)
-![Next.js](https://img.shields.io/badge/next.js-14+-black.svg)
+![Next.js](https://img.shields.io/badge/next.js-15.0.3-black.svg)
+![React](https://img.shields.io/badge/react-19.0.0-blue.svg)
 
 > **AI-powered HS code classification, duty calculator, and document generation for Canadian SMB importers. CARM-compliant customs automation platform.**
 
@@ -24,7 +25,7 @@ This platform provides classification guidance and calculation tools - **NOT off
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         FRONTEND                                 │
-│  Next.js 14 + TypeScript + Tailwind CSS                        │
+│  Next.js 15 + React 19 + TypeScript + Tailwind CSS             │
 │  Deployed on: Vercel (prod) / localhost:3000 (dev)             │
 └────────────────────────────┬────────────────────────────────────┘
                              │ HTTPS/REST
@@ -45,19 +46,46 @@ This platform provides classification guidance and calculation tools - **NOT off
 
 ## 🚀 Quick Start
 
+> **📖 For detailed setup instructions, see [QUICKSTART.md](QUICKSTART.md)**
+
 ### Prerequisites
 
 - **Python 3.11+** (backend)
 - **Node.js 18+** (frontend)
-- **Docker** (for services)
+- **Docker Desktop** (for services)
 - **Git**
 
-### 1. Clone & Setup
+### Option 1: Automated Setup (Recommended)
 
 ```bash
+# Clone the repository
 git clone https://github.com/yourcompany/Customs-App.git
 cd Customs-App
+
+# Run automated setup
+./setup.sh
+
+# Follow the on-screen instructions to start the servers
 ```
+
+### Option 2: Manual Setup
+
+See detailed manual setup instructions in [QUICKSTART.md](QUICKSTART.md)
+
+### Verify Installation
+
+After starting all services, run the verification script:
+
+```bash
+./verify.sh
+```
+
+This will check:
+- ✓ Docker services (PostgreSQL, Redis, MinIO, Mailhog)
+- ✓ Backend API health
+- ✓ Frontend accessibility
+- ✓ Database connectivity
+- ✓ All endpoints responding correctly
 
 ### 2. Environment Configuration
 
